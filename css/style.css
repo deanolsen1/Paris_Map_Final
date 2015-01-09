@@ -185,6 +185,42 @@ body{
 	z-index: 10;
 }
 
+.leaflet-clickable {
+    -webkit-transition-property: background color;
+    -webkit-transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-property: background color;
+    -moz-transition-duration: .5s;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-property: background color;
+    -o-transition-duration: .5s;
+    -o-transition-timing-function: ease-in;
+    -ms-transition-property: background color;
+    -ms-transition-duration: .5s;
+    -ms-transition-timing-function: ease-in;
+    transition-property: background color;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+}
+
+#svg.leaflet-zoom-animated{
+	-webkit-transition-property: background color;
+    -webkit-transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-property: background color;
+    -moz-transition-duration: .5s;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-property: background color;
+    -o-transition-duration: .5s;
+    -o-transition-timing-function: ease-in;
+    -ms-transition-property: background color;
+    -ms-transition-duration: .5s;
+    -ms-transition-timing-function: ease-in;
+    transition-property: background color;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+}
+
 .temporal-legend {
 	font-size: 18pt;
 	font-style: bold;
@@ -206,24 +242,6 @@ body{
 	background-color: #C35557;
 	position: relative;
 	bottom: 85px;
-}
-
-.leaflet-clickable {
-    -webkit-transition-property: background color;
-    -webkit-transition-duration: .5s;
-    -webkit-transition-timing-function: ease-in;
-    -moz-transition-property: background color;
-    -moz-transition-duration: .5s;
-    -moz-transition-timing-function: ease-in;
-    -o-transition-property: background color;
-    -o-transition-duration: .5s;
-    -o-transition-timing-function: ease-in;
-    -ms-transition-property: background color;
-    -ms-transition-duration: .5s;
-    -ms-transition-timing-function: ease-in;
-    transition-property: background color;
-    transition-duration: .5s;
-    transition-timing-function: ease-in;
 }
 
 .leaflet-popup-content-wrapper {

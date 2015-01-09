@@ -412,6 +412,8 @@ $(document).ready(function() {
           blur: 20,
           maxZoom: 16,
       }).addTo(map);
+	  
+	
 
 
 });
