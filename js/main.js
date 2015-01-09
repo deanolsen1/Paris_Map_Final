@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
 	var markers;
+	// Possible heat map layer var
+	var heat;
     var SMFilter = [];
 	var PageFilter = [];
 	var thisPage = 9; //sets the first page of the counter to page 9
@@ -19,15 +21,16 @@ $(document).ready(function() {
     var map = L.mapbox.map('map', 'deanolsen1.kdncn8ec', {zoomControl : false, 
     	//removed attribution from bottom of map to credits page
     	attributionControl: false});
-    //create zoom-in effect on map on load
-     map.setView([48.876, 2.357], 8);
-      window.setTimeout (function () {
-       	map.setView([48.876, 2.357], 11)}, 2000);
-      window.setTimeout (function () {
-       	map.setView([48.876, 2.357], 13)}, 4000);
-      window.setTimeout (function () {
-       	map.setView([48.876, 2.357], 15)}, 6000);
-       	//map.setView([48.876, 2.357], 15);
+    //create zoom-in effect on map on load, comment out to disable
+     // map.setView([48.876, 2.357], 8);
+     //  window.setTimeout (function () {
+     //   	map.setView([48.876, 2.357], 11)}, 2000);
+     //  window.setTimeout (function () {
+     //   	map.setView([48.876, 2.357], 13)}, 4000);
+     //  window.setTimeout (function () {
+     //   	map.setView([48.876, 2.357], 15)}, 6000);
+      //uncomment following line for non-zoomed map view
+       	map.setView([48.876, 2.357], 15);
 
 	// extra way of zooming in -- has plus button and minus button for zooming
     new L.Control.Zoom({ position: 'topright' }).addTo(map);
@@ -401,6 +404,14 @@ $(document).ready(function() {
 		temporalLegend.addTo(map);
 		$(".temporal-legend").text("On page " + startTimestamp);
 	}	// end createTemporalLegend()
+
+	
+	// Possible heat map layer
+	var heat = L.heatLayer(data, {
+          radius: 15,
+          blur: 20,
+          maxZoom: 16,
+      }).addTo(map);
 
 
 });
